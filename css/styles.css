@@ -1,9 +1,11 @@
 @font-face {
+  font-family: 'tall_dark_and_handsomeCn';
   src: url("../fonts/talldark-webfont.eot");
   src: url("../fonts/talldark-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/talldark-webfont.woff2") format("woff2"), url("../fonts/talldark-webfont.woff") format("woff"), url("../fonts/talldark-webfont.ttf") format("truetype"), url("../fonts/talldark-webfont.svg#tall_dark_and_handsomeCn") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: 'nevis-Bold';
   src: url("../fonts/nevis-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/nevis-Bold.woff") format("woff"), url("nevis-Bold.ttf") format("truetype"), url("../fonts/nevis-Bold.svg#nevis-Bold") format("svg");
   font-weight: normal;
   font-style: normal; }
@@ -44,7 +46,14 @@ body {
   color: #BD9A3D;
   text-decoration: none; }
 
-.mybtn {
+.rd-more:hover {
+  color: #9C27B0 !important; }
+
+a:hover {
+  text-decoration: none;
+  color: none; }
+
+.my-btn {
   padding: 10px 15px;
   display: inline-block;
   border: 2px solid;
@@ -95,8 +104,8 @@ h3 {
   z-index: 1; }
 
 #contact-me:hover {
-  background-color: #BD9A3D;
-  color: #9C27B0; }
+  border-color: #ffffff !important;
+  color: #ffffff; }
 
 #call-to-action {
   height: 125px;
@@ -123,6 +132,11 @@ h3 {
 
 #featured-recipes i {
   margin-right: 5px; }
+
+/* Nutritional Advice */
+#nutrional-advice a:hover {
+  text-decoration: none;
+  color: #9C27B0; }
 
 /* FOOTER */
 footer {
@@ -218,6 +232,10 @@ form {
 
 /*Media Queries*/
 /*Small Devices*/
+@media (min-width: 768px) {
+  #nutrional-advice {
+    font-size: 20px; } }
+/* End of Media Query */
 /*Medium Devices*/
 @media (min-width: 992px) {
   #main-bkg {
@@ -231,7 +249,11 @@ form {
     margin-top: 30px !important; }
 
   #cta-paragraph {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  #nutrional-advice {
+    font-size: 20px; } }
+/* End of Media Query */
 /*Large Devices*/
 @media (min-width: 1200px) {
   #main-bkg {
@@ -247,7 +269,11 @@ form {
     top: 40%; }
 
   #title-heading {
-    top: 60%; } }
+    top: 60%; }
+
+  #nutrional-advice {
+    font-size: 25px; } }
+/* End of Media Query */
 /*Extra Large Devices*/
 @media (min-width: 1824px) {
   /* Styles */
