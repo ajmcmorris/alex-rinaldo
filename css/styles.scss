@@ -1,0 +1,294 @@
+@font-face {
+    src: url('../fonts/talldark-webfont.eot');
+    src: url('../fonts/talldark-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/talldark-webfont.woff2') format('woff2'),
+         url('../fonts/talldark-webfont.woff') format('woff'),
+         url('../fonts/talldark-webfont.ttf') format('truetype'),
+         url('../fonts/talldark-webfont.svg#tall_dark_and_handsomeCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  src: url('../fonts/nevis-Bold.eot?#iefix') format('embedded-opentype'),  
+  	   url('../fonts/nevis-Bold.woff') format('woff'), url('nevis-Bold.ttf')  format('truetype'), 
+	   url('../fonts/nevis-Bold.svg#nevis-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+$nevis: 'nevis-Bold';
+$tall-dark: 'tall_dark_and_handsomeCn';
+$gold: #BD9A3D;
+$wht: #ffffff;
+$prp: #9C27B0;
+$grey: #CCCCCC;
+$cover: cover;
+@mixin background-size($cover){
+	-webkit-background-size: $cover;
+	-moz-background-size: $cover;
+	-o-background-size: $cover;
+	background-size: auto $cover;
+}
+
+/* Global */
+
+body{
+	font-family: $nevis;
+}
+.prp-font{
+	color:$prp;
+}
+.wht-font{
+	color:$wht;
+}
+.gold-font{
+	color:$gold;
+}
+.prp-brd{
+	border-color: $prp !important;
+}
+.prp-font{
+	color: $prp;
+}
+.gold-brd{
+	border-color: $gold !important
+}
+.fa{
+	color:$gold;
+}
+.bkg-position{
+	@include background-size($cover);
+	background:top center scroll no-repeat;
+}
+.rd-more{
+	background: $prp;
+	color: $gold;
+	text-decoration:none;
+}
+.mybtn{
+	padding:10px 15px;
+	display:inline-block;
+	border:2px solid;
+	margin: 5px 0 !important;
+	background-color:transparent;
+}
+.services{
+	margin-top:25px;
+	padding:10px 0;
+}
+.section-padding{
+	padding:25px 0;
+}
+p{
+	font-size:14px;
+}
+h1{
+	z-index:99999;
+	padding:15px;
+	background-color:rgba(189, 154, 61, .6);
+	font-family: $tall-dark;
+}
+h2{
+	font-size:40px;
+	text-align:center;
+	font-family: $tall-dark;
+	letter-spacing:0.5px;
+}
+h3{
+	font-size:18px;
+}
+/* Layout */
+#chicken-img{
+	background-image:url(../img/chicken.jpg);
+	height:300px;
+}
+#name-heading{
+	position:absolute;
+	top: 35%;
+	left:10%;
+}
+#title-heading{
+	position:absolute;
+	top: 50%;
+	left:10%;
+}
+#main-img{
+	z-index:1;
+}
+#contact-me:hover{
+	background-color: $gold;
+	color: $prp;
+}
+#call-to-action{
+	height:125px;
+	background-color: $prp;
+	padding-top:25px;
+}
+/* ABOUT */
+.post img{
+	margin:0 5px 5px 0;
+	float:left;
+}
+.post{
+	border-bottom:1px solid $grey;
+}
+#about-img{
+	height:300px;
+}
+/* RECIPES */
+#featured-recipes dt{
+	margin:7px 0;
+}
+#featured-recipes dd{
+	margin:7px 0;
+}
+#featured-recipes i{
+	margin-right:5px;
+}
+/* FOOTER */
+footer{
+	border-top:2px solid $gold;
+}
+#icon-list{
+	padding:0 !important;
+}
+#icon-list li{
+	display:inline-block;
+}
+#side-brd{
+	border-left:2px solid $gold;
+	border-right:2px solid $gold;
+	padding:0 10px;
+}
+/* CAROUSEL */
+
+.owl-carousel .item {
+    margin: 3px;
+}
+.owl-carousel .item img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+}
+.owl-theme .owl-controls .owl-page span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+/* NAVIGATION */
+
+/* BOOTSTRAP RESETS */
+.navbar{
+	margin-bottom:0px !important;
+}
+.navbar-default {
+  background-color: #fff !important;
+  border-color: transparent !important;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color:  $prp;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $prp;
+}
+.navbar-default .navbar-toggle {
+  border-color: $prp;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #555;
+  background-color:rgba(189, 154, 61, .4);
+}
+hr {
+  border-top: 1px solid $prp !important;
+}
+/*Form Error Messages*/
+form{
+	margin:25px 0;
+}
+.form-control.ng-pristine{
+	border-color:#FF6A6A;
+	color:#FF3030;
+}
+.form-control.ng-invalid-required{
+	border-color:#FF6A6A;
+	color:#FF3030;
+}
+.form-control.ng-dirty.ng-invalid-pattern{
+	border-color:#FF6A6A;
+	color:#FF3030;
+}
+.form-control.ng-dirty.ng-invalid-minlength{
+	border-color:#FF6A6A;
+	color:#FF3030;
+}
+.form-control.ng-dirty.ng-valid-pattern{
+	border-color:#9AFF9A;
+	color:#548B54;
+}
+.form-control.ng-valid-required{
+	border-color:#9AFF9A;
+	color:#548B54	;
+}
+/*Media Queries*/
+
+/*Small Devices*/
+@media (min-width: 768px){}
+/*Medium Devices*/
+@media (min-width: 992px){
+#main-bkg{
+	min-height:700px;
+}
+#chicken-img{
+	margin:0 40px 10px 0;
+	clear:both;
+}
+#cooking-header{
+	margin-top:30px !important;
+}
+#cta-paragraph{
+	font-size:18px;
+}
+}
+/*Large Devices*/
+@media (min-width: 1200px){
+#main-bkg{
+	min-height:800px;
+}
+#cta-paragraph{
+	font-size:24px;
+}
+h1{
+  font-size: 60px;
+}
+#name-heading{
+	top: 40%;
+}
+#title-heading{
+	top: 60%;
+}
+}
+/*Extra Large Devices*/
+@media (min-width : 1824px) {
+/* Styles */
+#main-bkg{
+	min-height:950px;
+}
+.section-padding{
+	padding:40px 0;
+}
+#name-heading{
+	top: 45%;
+}
+#title-heading{
+	top: 65%;
+}
+}
