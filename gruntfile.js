@@ -6,8 +6,25 @@ module.exports = function(grunt) {
   grunt.config.init({
 
   		jshint: {
-		    all: ['lib/*.js', 'test/*.js', 'Gruntfile.js']
+		    all: ['node_modules/grunt/lib/*.js', 'js/*.js', 'Gruntfile.js']
 		  }
+      sass: {                              
+    dist: {                           
+      options: {                       
+        style: 'expanded'
+      },
+      files: {                         
+        'css/styles.css': 'css/styles.scss',       
+      }
+    }
+  },
+      watch: {
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass']
+      }
+    }
+
   });
 
   // Minify Files
@@ -18,4 +35,8 @@ module.exports = function(grunt) {
 
   // Compile SASS to CSS
   grunt.loadNpmTasks('grunt-contrib-sass');
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.registerTask('default',['sass','jshint','uglify','watch']);
 };

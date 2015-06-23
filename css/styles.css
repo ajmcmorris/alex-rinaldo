@@ -90,6 +90,14 @@ h3 {
   background-image: url(../img/chicken.jpg);
   height: 300px; }
 
+#herbal {
+  background-image: url(../img/herbal-tea.jpg);
+  height: 300px; }
+
+#protein-pancake {
+  background-image: url(../img/Protein-Pancakes.jpg);
+  height: 300px; }
+
 #name-heading {
   position: absolute;
   top: 35%;
@@ -137,6 +145,10 @@ h3 {
 #nutrional-advice a:hover {
   text-decoration: none;
   color: #9C27B0; }
+
+/* BOOTCAMP */
+#btcmp-tbl td {
+  font-size: 10px; }
 
 /* FOOTER */
 footer {
@@ -234,14 +246,17 @@ form {
 /*Small Devices*/
 @media (min-width: 768px) {
   #nutrional-advice {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  #btcmp-tbl td {
+    font-size: 18px; } }
 /* End of Media Query */
 /*Medium Devices*/
 @media (min-width: 992px) {
   #main-bkg {
     min-height: 700px; }
 
-  #chicken-img {
+  #chicken-img, #protein-pancake, #herbal {
     margin: 0 40px 10px 0;
     clear: both; }
 
